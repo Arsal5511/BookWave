@@ -1,12 +1,12 @@
-// import React from 'react'
+/* eslint-disable */
+
+import React from 'react'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
   return (
     <div>
-      hello book lovers 
-      <h1 className="text-3xl font-bold text-red-300 underline">
-      Hello world!
-    </h1>
+      <Navbar />
     </div>
   )
 }

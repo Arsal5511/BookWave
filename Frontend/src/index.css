@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@500&family=Fredoka:wght@500&family=Sevillana&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Sevillana&display=swap');
+
+body{
+  font-family: poppins, sans-serif;
+}
+.sevillana-regular {
+  font-family: "Sevillana", cursive !important;
+  font-weight: 400;
+  font-style: normal;
+}
