@@ -21,18 +21,18 @@ function Navbar() {
   );
   return (
     <>
-      <div className="mx-auto max-w-screen-2xl container md:px-20 px-4">
+      <div className="mx-auto max-w-screen-2xl container md:px-20 ">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost px-1 lg:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-6 w-6 md:h-7 md:w-7"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -52,8 +52,11 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-            <a className="text-2xl font-bold sevillana-regular cursor-pointer">
-              BookWave
+            <a className=" flex flex-row items-start cursor-pointer">
+              <img className="w-8 h-8" src="/vite.svg" alt="" />
+              <span className=" text-2xl md:text-3xl sevillana-regular font-bold" >
+              BookCity
+              </span>
             </a>
           </div>
           <div className="navbar-end space-x-2">
