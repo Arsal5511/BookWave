@@ -1,8 +1,25 @@
 /* eslint-disable */
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Navbar() {
+  const [sticky, setSticky] = useState(false)
+  useEffect(() => {
+    const handleScroll =() =>{
+      if(window.scrollY>0){
+        setSticky(true)
+      }
+      else{
+        setSticky(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return ()=>{
+      window.removeEventListener('scroll', handleScroll)
+    }
+    
+  }, [])
+  
   const navItems = (
     <>
       <li>
@@ -21,8 +38,11 @@ function Navbar() {
   );
   return (
     <>
-      <div className="mx-auto max-w-screen-2xl container md:px-20 ">
-        <div className="navbar bg-base-100">
+      <div className={`mx-auto max-w-screen-2xl md:px-20 fixed top-0 right-0 left-0 ${
+        sticky? "sticky-navbar shadow-md backdrop-blur-md duration-300 transition-all ease-in-out"
+        : ""
+      }  `}>
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -67,14 +87,14 @@ function Navbar() {
               <label className=" flex px-3 py-1 border rounded-md  items-center gap-2">
                 <input
                   type="text"
-                  className="grow outline-none"
+                  className="bg-transparent outline-none"
                   placeholder="Search"
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
                   fill="currentColor"
-                  className="w-4 h-4 opacity-70"
+                  className="w-4 h-4 opacity-70 cursor-pointer"
                 >
                   <path
                     fillRule="evenodd"
