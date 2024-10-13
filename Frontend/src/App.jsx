@@ -11,7 +11,7 @@ function App() {
     <div>
       <Navbar />
       <Banner />
-      <FreeBook />
+      {/* <FreeBook /> */}
       <Footer />
     </div>
   )
