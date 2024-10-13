@@ -37,7 +37,7 @@ function Navbar() {
   );
   return (
     <>
-      <div className={`mx-auto max-w-screen-2xl md:px-20 fixed top-0 right-0 left-0 ${
+      <div className={`mx-auto max-w-screen-2xl container md:px-20 px-4 fixed top-0 right-0 left-0 ${
         sticky? "sticky-navbar shadow-md backdrop-blur-md duration-300 transition-all ease-in-out"
         : ""
       }  `}>

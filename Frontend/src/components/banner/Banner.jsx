@@ -1,14 +1,14 @@
 /* eslint-disable */
 
-import React from "react";
+import React from "react"
 import banner from "../../../public/images/banner.jpg"
 
 function Banner() {
   return (
     <>
       <div className="mx-auto max-w-screen-2xl container h-screen my-10 md:px-20 md:pr-0 px-4 flex flex-col md:flex-row">
-        <div className="order-2 md:order-1 w-full md:w-1/2">
-          <div className="mt-12 md:mt-32 space-y-6">
+        <div className="w-full md:w-1/2">
+          <div className="order-2 md:order-1 mt-12 md:mt-32 space-y-6">
             <h1 className="text-2xl md:text-4xl">
               Lorem ipsum dolor sit amet consect adipis eli{" "}
               <span className="text-blue-300">this is me Arslan abbas</span>
