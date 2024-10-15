@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import list from "../../../public/booksList.json";
+import Card from "../cards/Card";
 
 function FreeBook() {
   const filteredData = list.filter((data) => data.category === "free");
@@ -28,25 +29,25 @@ function FreeBook() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
-        },
+          dots: true
+        }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
-        },
+          initialSlide: 2
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -62,38 +63,15 @@ function FreeBook() {
             debitis? Unde, autem eos?
           </p>
         </div>
-
-        <div>
           <div className="slider-container">
             <Slider {...settings}>
-              <div>
-                <h3>1</h3>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
-              <div>
-                <h3>6</h3>
-              </div>
-              <div>
-                <h3>7</h3>
-              </div>
-              <div>
-                <h3>8</h3>
-              </div>
+              {filteredData.map((item) => (
+                <Card item={item} key={item.id} />
+              ))}
             </Slider>
           </div>
         </div>
-      </div>
+
     </>
   );
 }
