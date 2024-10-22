@@ -6,7 +6,7 @@ import banner from "../../../public/images/banner.jpg"
 function Banner() {
   return (
     <>
-      <div className="mx-auto max-w-screen-2xl container h-screen my-10 md:px-20 md:pr-0 px-4 flex flex-col md:flex-row">
+      <div className="mx-auto max-w-screen-2xl container my-10 md:px-20 md:pr-0 px-4 flex flex-col md:flex-row">
         <div className="w-full md:w-1/2">
           <div className="order-2 md:order-1 mt-12 md:mt-32 space-y-6">
             <h1 className="text-2xl md:text-4xl">
